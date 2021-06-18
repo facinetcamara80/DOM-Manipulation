@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <h1>Accessing DOM Elements</h1>
+
+  <div id="demo">This is my first demo div</div>
+
+  <div class="content">This is a div with some content</div>
+
+  <ul>
+
+    <li class="list-item">First List Item</li>
+
+    <li class="list-item">Second List Item</li>
+
+    <li class="list-item">Third List Item</li>
+
+    <li class="list-item">Fourth List Item</li>
+
+  </ul>
+
+  <script>
+    const myDiv = document.querySelector('#demo');
+    console.log( myDiv );
+    
+    const myList = document.querySelectorAll('.list-item')
+    console.log( myList );
+    
+    const myDemo = document.getElementById('demo');
+    console.log( myDemo );
+    
+    const myListAgain = document.getElementsByClassName('list-item');
+    console.log( myListAgain );
+    
+    myList.forEach((item) => {
+      item.style.backgroundColor = "lightgray";
+    });
+
+
+    for (let i = 0; i <= myListAgain.length; i++) {
+      myListAgain[i].style.border = "1px solid orange";
+    }
+  </script>
+</body>
+</html>
